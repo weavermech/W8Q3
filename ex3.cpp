@@ -19,7 +19,7 @@ int main()
 
 	num = 1;
 	listA.InsFirst(num);
-	num = 9;
+	num = 3;
 	listA.InsLast(num);
 
 

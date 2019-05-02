@@ -96,17 +96,15 @@ template<class T>  bool ListC<T>::operator==(ListC<T> & b)
 	IterC<T> ita(*this);
 	IterC<T> itb(b);
 
-	bool state = false;
 	for (ita.First(), itb.First(); ita.IsElem(), itb.IsElem(); ita.Next(),itb.Next() )
 	{
-		if (ita.Data() == itb.Data())
+		if (ita.Data() != itb.Data())
 		{
-			state = true;
+			return false;
 		}
-		else state = false;
 	}
 
-	return state;
+	return true;
 }
 
 /*--------------------------------------------------------------------------*/
