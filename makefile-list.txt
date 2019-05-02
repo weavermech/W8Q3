@@ -1,0 +1,15 @@
+# makefile
+
+# all is a dummy target that forces the making of multiple targets, in this case just ex1
+
+all: ex1
+
+ex1: ex1.o StringC.o
+	g++ ex1.o StringC.o -o ex1
+
+ex1.o: ex1.cpp LList.h LList.tcc
+	g++ -g -c ex1.cpp
+
+StringC.o: StringC.h StringC.cpp
+	g++ -g -c StringC.cpp
+
