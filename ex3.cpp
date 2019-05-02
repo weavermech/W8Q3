@@ -19,7 +19,7 @@ int main()
 
 	num = 1;
 	listA.InsFirst(num);
-	num = 3;
+	num = 9;
 	listA.InsLast(num);
 
 
@@ -27,6 +27,9 @@ int main()
 	listB.InsFirst(num);
 	num = 9;
 	listB.InsLast(num);
+	num = 9;
+	listB.InsLast(num);
+
 
 	if (listA == listB)
 		cout << "Winner!" << endl;

@@ -98,7 +98,7 @@ template<class T>  bool ListC<T>::operator==(ListC<T> & b)
 
 	for (ita.First(), itb.First(); ita.IsElem(), itb.IsElem(); ita.Next(),itb.Next() )
 	{
-		if (ita.Data() != itb.Data())
+		if (ita.Data() != itb.Data()  || ita.IsElem() != itb.IsElem()) //contents and end
 		{
 			return false;
 		}
